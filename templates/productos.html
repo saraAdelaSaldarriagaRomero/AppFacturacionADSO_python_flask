@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Facturación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://i.ibb.co/80fbh8c/logoWeb.png" alt="logoWeb">
+            </a>
+        </div>
+        <h1>App de Facturación</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/facturas">Facturas</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/personal">Personal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+
+        <!-- Pantalla de Productos -->
+        <section id="productos">
+            <h2>Productos</h2>
+            <form id="producto-form">
+                <label for="producto-codigo">Código:</label>
+                <input type="text" id="producto-codigo" name="producto-codigo">
+                <label for="producto-descripcion">Descripción:</label>
+                <input type="text" id="producto-descripcion" name="producto-descripcion">
+                <label for="producto-valor">Valor por Unidad:</label>
+                <input type="text" id="producto-valor" name="producto-valor">
+                <label for="producto-cantidad">Cantidad:</label>
+                <input type="text" id="producto-cantidad" name="producto-cantidad">
+                <button type="submit">Guardar</button>
+            </form>
+            <div class="crud-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Valor por Unidad</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí irán los productos -->
+                        <tr>
+                            <td>001</td>
+                            <td>Producto A</td>
+                            <td>$10</td>
+                            <td>100</td>
+                            <td>
+                                <button class="btn-actualizar">Actualizar</button>
+                                <button class="btn-eliminar">Eliminar</button>
+                                <button class="btn-agregar">Agregar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        
+    </main>
+</body>
+</html>
+

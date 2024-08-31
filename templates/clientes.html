@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Facturación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://i.ibb.co/80fbh8c/logoWeb.png" alt="logoWeb">
+            </a>
+        </div>
+        <h1>App de Facturación</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/facturas">Facturas</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/personal">Personal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      
+
+        <!-- Pantalla de Clientes -->
+        <section id="clientes">
+            <h2>Clientes</h2>
+            <form id="cliente-form">
+                <label for="cliente-id">ID Cliente:</label>
+                <input type="text" id="cliente-id" name="cliente-id">
+                <label for="cliente-nombre">Nombre:</label>
+                <input type="text" id="cliente-nombre" name="cliente-nombre">
+                <label for="cliente-apellido">Apellido:</label>
+                <input type="text" id="cliente-apellido" name="cliente-apellido">
+                <label for="cliente-email">Email:</label>
+                <input type="email" id="cliente-email" name="cliente-email">
+                <label for="cliente-domicilio">Domicilio:</label>
+                <input type="text" id="cliente-domicilio" name="cliente-domicilio">
+                <label for="cliente-telefono">Teléfono:</label>
+                <input type="text" id="cliente-telefono" name="cliente-telefono">
+                <label for="cliente-fechacumple">Fecha de Cumpleaños:</label>
+                <input type="date" id="cliente-fechacumple" name="cliente-fechacumple">
+                <button type="submit">Guardar</button>
+            </form>
+            <div class="crud-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Domicilio</th>
+                            <th>Teléfono</th>
+                            <th>Fecha de Cumpleaños</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí irán los clientes -->
+                        <tr>
+                            <td>1</td>
+                            <td>Juan</td>
+                            <td>Pérez</td>
+                            <td>juan@example.com</td>
+                            <td>Calle 123</td>
+                            <td>123456789</td>
+                            <td>01/01/1980</td>
+                            <td>
+                                <button class="btn-actualizar">Actualizar</button>
+                                <button class="btn-eliminar">Eliminar</button>
+                                <button class="btn-agregar">Agregar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        
+    </main>
+</body>
+</html>
+

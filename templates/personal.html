@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Facturación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://i.ibb.co/80fbh8c/logoWeb.png" alt="logoWeb">
+            </a>
+        </div>
+        <h1>App de Facturación</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/facturas">Facturas</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/personal">Personal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <!-- Pantalla de Personal -->
+        <section id="personal">
+            <h2>Personal</h2>
+            <form id="personal-form">
+                <label for="personal-id">ID Personal:</label>
+                <input type="text" id="personal-id" name="personal-id">
+                <label for="personal-nombre">Nombre:</label>
+                <input type="text" id="personal-nombre" name="personal-nombre">
+                <label for="personal-apellido">Apellido:</label>
+                <input type="text" id="personal-apellido" name="personal-apellido">
+                <label for="personal-email">Email:</label>
+                <input type="email" id="personal-email" name="personal-email">
+                <label for="personal-domicilio">Domicilio:</label>
+                <input type="text" id="personal-domicilio" name="personal-domicilio">
+                <label for="personal-telefono">Teléfono:</label>
+                <input type="text" id="personal-telefono" name="personal-telefono">
+                <label for="personal-fechacumple">Fecha de Cumpleaños:</label>
+                <input type="date" id="personal-fechacumple" name="personal-fechacumple">
+                <button type="submit">Guardar</button>
+            </form>
+            <div class="crud-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Domicilio</th>
+                            <th>Teléfono</th>
+                            <th>Fecha de Cumpleaños</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí irán los empleados -->
+                        <tr>
+                            <td>1</td>
+                            <td>Pedro</td>
+                            <td>Gómez</td>
+                            <td>pedro@example.com</td>
+                            <td>Avenida 456</td>
+                            <td>987654321</td>
+                            <td>02/02/1985</td>
+                                <td>
+                                <button class="btn-actualizar">Actualizar</button>
+                                <button class="btn-eliminar">Eliminar</button>
+                                <button class="btn-agregar">Agregar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

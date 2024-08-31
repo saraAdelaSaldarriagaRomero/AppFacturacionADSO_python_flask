@@ -1,0 +1,130 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #521108;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 100px;
+}
+
+nav {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: #f4e668;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #521108;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    padding-top: 120px; /* Ajustar para dejar espacio para el header y nav fijos */
+}
+
+section {
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+
+.inicio{
+    margin-top: 300px;
+    color: #521108;
+    margin-left: 200px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 50px;
+
+}
+
+h2 {
+    color: #521108;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #521108;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #521108;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3d0c06;
+}
+
+.crud-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crud-list table, .crud-list th, .crud-list td {
+    border: 1px solid #ddd;
+}
+
+.crud-list th, .crud-list td {
+    padding: 8px;
+    text-align: left;
+}
+
+.crud-list th {
+    background-color: #f4e668;
+    color: #521108;
+}

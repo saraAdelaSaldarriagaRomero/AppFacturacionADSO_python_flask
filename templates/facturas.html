@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Facturación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://i.ibb.co/80fbh8c/logoWeb.png" alt="logoWeb">
+            </a>
+        </div>
+        <h1>App de Facturación</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/facturas">Facturas</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/personal">Personal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Pantalla de Facturas -->
+        <section id="facturas">
+            <h2>Facturas</h2>
+            <form id="factura-form">
+                <label for="factura-id">ID Factura:</label>
+                <input type="text" id="factura-id" name="factura-id">
+                <label for="factura-cliente">Cliente:</label>
+                <input type="text" id="factura-cliente" name="factura-cliente">
+                <label for="factura-producto">Producto:</label>
+                <input type="text" id="factura-producto" name="factura-producto">
+                <label for="factura-cantidad">Cantidad:</label>
+                <input type="text" id="factura-cantidad" name="factura-cantidad">
+                <label for="factura-total">Total:</label>
+                <input type="text" id="factura-total" name="factura-total">
+                <button type="submit">Guardar</button>
+                <button type="submit">Imprimir</button>
+            </form>
+            <div class="crud-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí irán las facturas -->
+                        <tr>
+                            <td>1</td>
+                            <td>Cliente 1</td>
+                            <td>Producto 1</td>
+                            <td>2</td>
+                            <td>$200</td>
+                            <td>
+                                <button class="btn-actualizar">Actualizar</button>
+                                <button class="btn-eliminar">Eliminar</button>
+                                <button class="btn-agregar">Agregar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        
+       
+    </main>
+</body>
+</html>
+
