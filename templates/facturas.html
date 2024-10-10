@@ -17,16 +17,10 @@
         <h1>App de Facturación</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/facturas">Facturas</a></li>
-            <li><a href="/productos">Productos</a></li>
-            <li><a href="/clientes">Clientes</a></li>
-            <li><a href="/personal">Personal</a></li>
-        </ul>
-    </nav>
+  
+    {% extends 'layout.html' %}
 
+    {% block contenido %}
     <main>
         <!-- Pantalla de Facturas -->
         <section id="facturas">
@@ -79,6 +73,7 @@
         
        
     </main>
+    {% endblock contenido %}
 </body>
 </html>
 

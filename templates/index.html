@@ -1,45 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Facturación</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% extends 'layout.html' %}
 
-    
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="/">
-                <img src="https://i.ibb.co/80fbh8c/logoWeb.png" alt="logoWeb">
-            </a>
-        </div>
-        <h1>App de Facturación</h1>
-    </header>
+{% block contenido %}
+ BIENVENIDOS
+{% endblock contenido %}
 
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/facturas">Facturas</a></li>
-            <li><a href="/productos">Productos</a></li>
-            <li><a href="/clientes">Clientes</a></li>
-            <li><a href="/personal">Personal</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h1 class="inicio">BIENVENIDOS AL SISTEMA DE FACTURACIÓN <br>DE #HotDog</h1>
-
-        <div class="login-form">
-            <form action="index.html" method="post">
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Iniciar Sesión</button>
-            </form>
-        </div>
-    </main>
-</body>
-</html>

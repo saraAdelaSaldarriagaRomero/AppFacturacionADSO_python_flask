@@ -17,22 +17,22 @@ if __name__ == '__main__':
     # cuando se detectan cambios en el código y proporciona información detallada sobre errores.
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',varTituloPagina='Inicio')
 
 
-@app.route('/productos')
+@app.route('/productos',varTituloPagina='Productos')
 def productos():
     return render_template('productos.html')
 
 
-@app.route('/clientes')
+@app.route('/clientes',varTituloPagina='Clientes')
 def clientes():
     return render_template('clientes.html')
 
 @app.route('/personal')
 def personal():
-    return render_template('personal.html')
+    return render_template('personal.html',varTituloPagina='Personal')
 
 @app.route('/facturas')
 def facturas():
-    return render_template('facturas.html')
+    return render_template('facturas.html',varTituloPagina='Facturas')
