@@ -1,6 +1,14 @@
-from flask import Flask, render_template
+
+from flask import Flask, render_template, request, redirect, url_for
+from models import Base, engine
+from models.productos import Productos
+from models.categorias import Categorias
+from models.personal import Personal
+from models.clientes import Clientes
 
 app = Flask(__name__)
+
+Base.metadata.create_all(engine)
 
 @app.route('/')
 def index():

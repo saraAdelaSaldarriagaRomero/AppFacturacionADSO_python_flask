@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, ForeignKey,Date
 from models import session, Base
-class Facturas():
+class Facturas(Base):
     __tablename__='facturas'
-    id = Column(Integer,prymary_key=True)
+    id = Column(Integer,primary_key=True)
     numero_factura = Column(Integer,(20),unique=True, nullable=False)
     fecha= Column(Date,(20),unique=False, nullable=False)
 

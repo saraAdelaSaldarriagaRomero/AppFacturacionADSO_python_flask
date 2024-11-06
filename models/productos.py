@@ -4,7 +4,7 @@ from models import session, Base
 
 class Productos(Base):
     __tablename__='productos'
-    id = Column(Integer,prymary_key=True)
+    id = Column(Integer,primary_key=True)
     descripcion = Column(String(300),unique=True, nullable=False)
     valor_unitario= Column(Float(10,8))
     unidad_medida= Column(String(3),nullable=False)
@@ -18,3 +18,6 @@ class Productos(Base):
         self.unidad_medida = unidad_medida
         self.cantida_stock = cantida_stock
         self.categoria = categoria
+
+
+        

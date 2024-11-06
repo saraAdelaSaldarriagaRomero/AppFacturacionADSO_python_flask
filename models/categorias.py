@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from models import session, Base
 
-class Categoria():
+class Categorias(Base):
     __tablename__ = 'categorias'
 
     id = Column(Integer, primary_key=True)
@@ -10,3 +10,6 @@ class Categoria():
 
 def __init__(self, categoria):
         self.categoria = categoria
+
+
+        
