@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Valor Unitario</th>      
+      <th scope="col">Unidad Medida</th>   
+      <th scope="col">Cantidad en Stock</th>      
+      <th scope="col">Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for producto in productos %}
+        <tr>
+          <th scope="row">{{producto.id}}</th>
+          <td>{{producto.descripcion}}</td>
+          <td>{{producto.valor_unitario}}</td>
+          <td>{{producto.unidad_medida}}</td>
+          <td>{{producto.cantidad_stock}}</td>
+          <td>{{producto.categoria}}</td>
+        </tr>
+      {% endfor %}    
+  </tbody>
+</table>
+{% endblock contenido %}    
+     

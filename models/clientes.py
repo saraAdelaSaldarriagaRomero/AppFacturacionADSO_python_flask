@@ -16,3 +16,12 @@ class Clientes(Base):
         self.direccion = direccion
         self.fecha_nacimiento = fecha_nacimiento
         self.telefono = telefono
+
+    def obtener_clientes():
+        clientes = session.query(Clientes).all()
+        return clientes
+    
+    def agregar_clientes(clientes):
+        clientes = session.add(clientes)
+        session.commit()
+        return clientes    

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}
+<form action="crear_producto" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="descripcion">Descripción Producto</label>
+      <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción Producto">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="valor_unitario">Valor Unitario</label>
+      <input type="text" class="form-control" id="valor_unitario" name="valor_unitario" placeholder="Valor Unitario">
+    </div>
+
+  </div>
+  <div class="form-group col-md-4">
+    <label for="unidad_medida">Unidad de Medida</label>
+    <select id="unidad_medida" name="unidad_medida" class="form-control">
+        <option selected>Seleccione...</option>
+        <option value="GRS">GRS</option>
+        <option value="UND">UND</option>
+    </select>
+  </div>
+  
+  <div class="form-group col-md-6">
+    <label for="cantidad_stock">Cantidad Stock</label>
+    <input type="text" class="form-control" id="cantidad_stock" name="cantidad_stock" placeholder="Cantidad en Stock">
+  </div>
+    <div class="form-group col-md-4">
+      <label for="categoria">Categoria</label>
+      <select id="categoria" name="categoria" class="form-control">
+          <option selected>Seleccione...</option>
+          {% for categoria in categorias %}
+            <option value={{categoria.id}}>{{categoria.categoria}}</option>
+          {% endfor %}    
+      </select>
+    </div>
+    
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+{% endblock contenido %}
+      
